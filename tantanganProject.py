@@ -1,30 +1,10 @@
-AP='cls'
-AO='     Input tidak valid!'
-AN='descending'
-AM='ascending'
-AL='     Hasilnya --> %s adalah bilangan %s'
-AK='     Bilangan yang akan diuji --> '
-AJ='    '
-AI='     Value tidak valid!\n'
-m='0'
-l=None
-U='     +'
-R='  '
-Q='\n'
-P='     |'
-N='+'
-M='-'
-L='|'
-K=str
-J=float
-G=int
-F=' '
-E=input
-D=len
-C=range
-B=''
-A=print
+AP='cls'; AO='     Input tidak valid!'; AN='descending'; AJ='    '
+AM='ascending'; AL='     Hasilnya --> %s adalah bilangan %s'; AK='     Bilangan yang akan diuji --> '
+AI='     Value tidak valid!\n'; m='0'; l=None; U='     +'; R='  '; Q='\n'; P='     |'; N='+'; M='-'; L='|'
+K=str; J=float; G=int; F=' '; E=input; D=len; C=range; B=''; A=print
+
 import calendar as n,math as V,random as o,os,time
+
 class p:
 	def helloWorld(I):
 		E='Hello World!';A(Q);A(U,end=B)
