@@ -14,7 +14,7 @@ STUDI KASUS
     Contoh Output:
         "NIM  xxxx dengan nama xxxx"
         "NIM  xxxx dengan nama xxxx"
-8. Butalah function "MahasiswaIF", yang hanya akan
+8. Butalah function "mahasiswaIF", yang hanya akan
 menampilkan nama mahasiswa dari profi informatika,
 jika diberikan argumen "informatika"
 9. Buatlah function "tambahData" yang akan menambahkan
@@ -46,7 +46,7 @@ del dictMahasiswa["alamat"]
 # print(dictMahasiswa) --> debug hasil
 
 # Mengisi list dataMahasiswa dengan dictMahasiswa
-dataMahasiswa = list(dictMahasiswa.items())
+dataMahasiswa = [dictMahasiswa,]
 # print(dataMahasiswa) --> debug hasil
 
 # Tambahkan data berikut ke dalam dataMahasiswa
@@ -55,7 +55,7 @@ dictMahasiswaOktavia = {
     "nama" : "oktavia",
     "prodi" : "arsitektur",
     "hobi" : "menyanyi"    
-}; dataMahasiswa.append(list(dictMahasiswaOktavia.items()))
+}; dataMahasiswa.append(dictMahasiswaOktavia)
 # print(dataMahasiswa) --> debug hasil
 
 # Mengubah "menghayal" menjadi "coding"
@@ -63,5 +63,46 @@ if dictMahasiswa["hobi"] == "menghayal": dictMahasiswa["hobi"] = "coding"
 # print(dictMahasiswa) --> debug hasil
 
 # Menampilkan hanya nim dan nama dari data yang ada dalam dataMahasiswa
-listTrueKey = ['nim', 'nama']
-print(dataMahasiswa)
+for element in dataMahasiswa:
+    nimData = element['nim']; namaData = element['nama']
+    # print(f'NIM {nimData} dengan Nama {namaData}') --> debug hasil
+
+
+# Membuat function mahasiswaIF, menampilkan nama jika argumen "informatika"
+def mahasiswaIF(prodi):
+    counter = 1
+    if (prodi == 'informatika'):
+        print("Nama mahasiswa informatika: ")
+        for element in dataMahasiswa:
+            if (element['prodi'] == 'informatika'):
+                print(counter,'). ', element['nama'], sep='')
+                counter += 1
+# mahasiswaIF('informatika') --> debug pemanggilan
+
+
+# Membuat function "tambahData" yang akan menambahkan data yang diinputkan oleh pengguna ke dalam dataMahasiswa
+def tambahData():
+    dataTambahan = {
+        "nim" : "",
+        "nama" : "",
+        "prodi" : "",
+        "hobi" : ""    
+    }
+
+    for data in dataMahasiswa:
+        listData = list(dictMahasiswa.keys())
+
+    for data in range(len(dataTambahan)):
+        pilihanInput = listData[data]
+        valueInput = input(f'Masukkan {pilihanInput} anda: ')
+        dataTambahan.update({pilihanInput: valueInput})
+
+    return dataTambahan
+
+def tambahkanData():
+    dataMahasiswa.append(tambahData())
+
+'''
+tambahkanData()
+print(dataMahasiswa) --> debug hasil
+'''
