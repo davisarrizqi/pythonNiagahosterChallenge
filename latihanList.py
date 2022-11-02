@@ -8,7 +8,13 @@ Studi Kasus
 5. Sisipkan "Semangka" di antara "Jeruk" dan "Mangga"
 6. Urutkan item pada listBuah sesuai abjad
 7. Tampilkan buah yang berawalan "m" di dalam listBuah
-8. Buatlah function "buahku" dengan parameter
+8. Buatlah function "buahku" dengan parameter "huruf" yang
+   akan me-return-kan list yang berisi nama buah yang mengandung 
+   huruf "a"
+9. Buatlah agar list "matrik" dapat tampil seperti berikut:
+   Matrik:
+   3  -2   1
+  -1   4   7
 
 '''
 
@@ -69,8 +75,15 @@ for element in listBuah:
         print(element)
 
 
-# Membuat function "buahku" dengan parameter untuk menginput pada listBuah
-def buahku(namaBuah):
-    listBuah.append(namaBuah)
-buahku("Buah Bibir")
-print(listBuah)
+# Membuat function "buahku", parameter "huruf"
+# return list berisi nama buah mengandung "a"
+def buahku(huruf):
+    listBaru = [];
+    for items in listBuah:
+        for alpha in items:
+            if (alpha == huruf):
+                if (items not in listBaru) : listBaru.append(items)
+    return listBaru
+listBuahku = buahku('a')  # --> Memasukkan value pada variabel
+
+
