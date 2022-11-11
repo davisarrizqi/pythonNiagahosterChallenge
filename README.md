@@ -1,4 +1,4 @@
-# 17 Python Project
+# 17 Python Project (Bonus Hasil Challenge dari Dosen)
 
   Project ini merupakan hasil kompilasi dari semua rekomendasi project yang tersedia pada halaman website Niagahoster. Mulai dari Hello World sampai input nilai dan menampilkannya dalam tabel yang bisa ditampilkan secara adaptif sudah saya buat, dan pada project ini telah saya lakukan minify agar lebih ringan untuk dijalankan.
   
